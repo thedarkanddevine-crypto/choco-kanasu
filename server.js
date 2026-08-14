@@ -185,5 +185,5 @@ app.delete("/api/admin/reviews/:id", (req,res) => {
   res.json({ok:true});
 });
 
-app.get("*", (req,res) => res.sendFile(path.join(__dirname,"public","index.html")));
+app.get("/{*splat}", (req,res) => res.sendFile(path.join(__dirname,"public","index.html")));
 app.listen(PORT,()=>console.log(`Choco Kanasu running at http://localhost:${PORT}`));
